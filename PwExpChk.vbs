@@ -52,7 +52,7 @@ intDaysLeft = DateDiff( "d", Date, strWhenPasswordExpires )
 
 
 ' Display Popup Warning
-'if ( intDaysLeft <= intPopupWarningInDays ) and ( intDaysLeft >= 0 ) then
+if ( intDaysLeft <= intPopupWarningInDays ) and ( intDaysLeft >= 0 ) then
 	Msgbox "Password Expires in " & intDaysLeft & " day(s)" & " at " & strWhenPasswordExpires & vbNewLine & vbNewLine & _
 	"Press CTRL-ALT-DEL and select the 'Change a password...' option to change your password.", 0, "Password Expiration Notice"
-'End if
+End if
