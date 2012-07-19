@@ -12,7 +12,7 @@ Download the VBScript [PwExpChk.vbs] (http://github.com/richardfleming/WindowsSc
 
 Configurables
 -------------
-intPopupWarningInDays - Set the number of days before password expiration to notify.  Default is 7.
+- intPopupWarningInDays - Set the number of days before password expiration to notify.  Default is 7.
 
 
 pwExpEmailWarning.ps1
@@ -26,11 +26,18 @@ Ensure that your domain controller is set to run remotesigned scripts, or this w
 
 Configurables
 -------------
-strSMTPServer - your SMTP server
-strFromEmail - your default from email address
-strFromDisplayName - the nice name for strFromEmail
-arrSMTPExempt - (Optional) Add SamAccountName to array (useful for those admins who don't like/want to change their passwords)
-intPwdExpireNotificationStartDay - (optional) How many days prior to password expiry do you want to start sending email notifications (default 15)
-function Prepare-SMTPMessage - (Optional) If you don't like the default email message, look in here.
-SIG - (Optional) Sign with your organisations own codesigning cert.
- 
+- strSMTPServer - your SMTP server
+- strFromEmail - your default from email address
+- strFromDisplayName - the nice name for strFromEmail
+- arrSMTPExempt - (Optional) Add SamAccountName to array (useful for those admins who don't like/want to change their passwords)
+- intPwdExpireNotificationStartDay - (optional) How many days prior to password expiry do you want to start sending email notifications (default 15)
+- function Prepare-SMTPMessage - (Optional) If you don't like the default email message, look in here.
+- SIG - (Optional) Sign with your organisations own codesigning cert.
+
+
+profileFixer\
+-------------
+Powershell and Batch file combo, used for fixing Windows corrupt/temporary profile
+
+### Usage
+Download the profileFixer [profileFixer] (http://github.com/richardfleming/WindowsScripts/blob/master/profileFixer) and stick it in C:\, then run the batch file.
